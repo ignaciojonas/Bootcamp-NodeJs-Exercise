@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	.page-header
+	h1 Documents	
+	- var items = docs
+	each item in items
+		li
+			a(href='/doc/' + item._id) #{item._id}
